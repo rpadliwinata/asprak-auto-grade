@@ -1,6 +1,5 @@
-[
-    {
-        "kelas": "IF03",
+{
+    "IF03": {
         "praktikan": [
             "MUHAMMAD HAMMAM WIBOWO",
             "MUHAMAD HAFIZH ALFAYEZ",
@@ -22,8 +21,7 @@
             []
         ]
     },
-    {
-        "kelas": "IF07",
+    "IF07": {
         "praktikan": [
             "ANDI ACHMAD ADJIE",
             "ALFI SYAHRIN PRATAMA",
@@ -43,8 +41,7 @@
             []
         ]
     },
-    {
-        "kelas": "IF10",
+    "IF10": {
         "praktikan": [
             "ADHYASTA NAUFAL FAADHILAH",
             "GERRY CIPUTRA LUNARDI",
@@ -64,8 +61,7 @@
             []
         ]
     },
-    {
-        "kelas": "IF12",
+    "IF12": {
         "praktikan": [
             "FATUR RAHMAN",
             "MUHAMMAD RYAN RASYID",
@@ -88,8 +84,7 @@
             []
         ]
     },
-    {
-        "kelas": "IF02",
+    "IF02": {
         "praktikan": [
             "AURA SABINA PRANIKA",
             "ANGLY KHAN SURYA",
@@ -109,8 +104,7 @@
             []
         ]
     },
-    {
-        "kelas": "IT01",
+    "IT01": {
         "praktikan": [
             "YOSI ARBILLA",
             "AHMAD DZAKY AR RAZI",
@@ -128,4 +122,4 @@
             []
         ]
     }
-]
+}

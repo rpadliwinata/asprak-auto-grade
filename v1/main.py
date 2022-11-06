@@ -129,31 +129,32 @@ if __name__ == "__main__":
     time.sleep(1)
     try:
         start = timeit.default_timer()
-        data = json.load('nilai.json')
-        for data in datas:
-            pyautogui.hotkey('alt', 'tab')
-            for num in range(len(data['praktikan'])):
-                open_a_student(data['praktikan'][num])
-                pyautogui.hotkey('ctrl', 'pagedown')
-                for quest in range(len(data['nilai'][0])):
-                    time.sleep(3)
-                    find_and_open('Make', quest)
-                    time.sleep(3)
-                    coor = pyautogui.locateOnScreen('class_diagram.png')
-                    if coor:
-                        pyautogui.press('tab')
-                    for i in range(7):
-                        pyautogui.press('tab')
-                    pyautogui.write(str(data['nilai'][num][quest]))
-                    pyautogui.press('enter')
-                    time.sleep(3)
-                    pyautogui.press('end')
+        list_data = json.load('nilai.json')
+        kelas = pyautogui.prompt("Masukkan kelas")
+        data = list_data[kelas]
+        pyautogui.hotkey('alt', 'tab')
+        for num in range(len(data['praktikan'])):
+            open_a_student(data['praktikan'][num])
+            pyautogui.hotkey('ctrl', 'pagedown')
+            for quest in range(len(data['nilai'][0])):
                 time.sleep(3)
-                pyautogui.hotkey('ctrl', 'w')
-                pyautogui.hotkey('ctrl', 'pagedown')
-                pyautogui.write(str(sum(data['nilai'][num])))
+                find_and_open('Make', quest)
+                time.sleep(3)
+                coor = pyautogui.locateOnScreen('class_diagram.png')
+                if coor:
+                    pyautogui.press('tab')
+                for i in range(7):
+                    pyautogui.press('tab')
+                pyautogui.write(str(data['nilai'][num][quest]))
                 pyautogui.press('enter')
-                pyautogui.hotkey('ctrl', 'pageup')
+                time.sleep(3)
+                pyautogui.press('end')
+            time.sleep(3)
+            pyautogui.hotkey('ctrl', 'w')
+            pyautogui.hotkey('ctrl', 'pagedown')
+            pyautogui.write(str(sum(data['nilai'][num])))
+            pyautogui.press('enter')
+            pyautogui.hotkey('ctrl', 'pageup')
         stop = timeit.default_timer()
         pyautogui.alert(text=f'Selesai dalam waktu {stop-start}', title='Selesai')
     except KeyboardInterrupt:
